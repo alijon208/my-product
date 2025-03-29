@@ -1,0 +1,54 @@
+.sign-in {
+    padding: 14px 32px;
+    border: 1px solid rgba(188, 208, 229, 1);
+    border-radius: 4px;
+    @include poppins (600, 16px, 100%);
+    color: var(--dark);
+    margin-right: 24px;
+    transition: 300ms;
+
+    &:hover {
+        background-color: rgba(188, 208, 229, 1);
+        color: white;
+    }
+}
+
+.sign-up {
+    background-color: $light-green;
+    border: 1px solid $light-green;
+    border-radius: 4px;
+    padding: 10px 30px;
+    color: white;
+    margin-right: 24px; 
+    transition: 300ms;
+    &:hover {
+        background-color: transparent;
+        color: $light-green;
+    }
+}
+
+.sign {
+    @include flex-box;
+}
+
+@media only screen and (max-width:900px){
+    .sign{
+        flex-direction: column;
+        margin-left: 25%;
+        align-items: flex-start;
+    }
+
+    .sign-in{
+        margin-bottom: 30px;
+        color: white;
+    }
+
+    .sign-up{
+        background-color: rgb(5, 97, 86);
+        border: 1px solid rgb(5, 97, 86);
+        margin-bottom: 30px;
+        &:hover{
+            background-color: transparent;
+        }
+    }
+}

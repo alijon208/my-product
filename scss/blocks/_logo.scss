@@ -1,0 +1,10 @@
+.logo{
+    @include poppins (700,30px,28px);
+    color: var(--dark);
+    display: flex; 
+    align-items: center;
+}
+
+.logo__img{
+    margin-right: 10px;
+}

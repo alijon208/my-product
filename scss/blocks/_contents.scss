@@ -1,0 +1,123 @@
+.contents{
+    margin-top: 200px;
+}
+
+.contents__list{
+    @include flex-box;
+}
+
+.contents__item-img{
+    border-radius: 8px 8px 0 0;
+}
+
+.contents__item-smalltext{
+    @include poppins;
+    color: var(--dark);
+    margin-left: 24px;
+    margin-top: 24px;
+}
+
+.contents__item{
+    background-color: var(--white);
+    margin-right: 30px;
+    border: 1px solid rgba(222, 222, 222, 1);
+    border-radius: 8px;
+    max-width: 348px;
+    cursor: pointer;
+    &:last-child{
+        margin-right: 0;
+    }
+    &:hover{
+        .contents__item-bigtext{
+            color: $light-green;
+        }
+    }
+}
+
+.contents__item-bigtext{
+    @include poppins (700,24px,40px);
+    color: var(--dark);
+    margin-left: 24px;
+    margin-bottom: 40px;
+}
+
+.contents__title{
+    @include poppins (700,34px,100%);
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.contents__text{
+    @include poppins (500,16px,26px);
+    color: var(--dark);
+    margin-bottom: 35px;
+}
+
+.contents-pag__button{
+    width: 16px;
+    height: 16px;
+    background-color: rgba(239, 239, 239, 1);
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    border: none
+}
+
+.contents-pag__button--active{
+    background-color: $light-green;
+}
+
+.contents-pag__list{
+    @include flex-box;
+    justify-content: center;
+    margin-top: 64px;
+}
+
+@media only screen and (max-width:1145px){
+    .contents__list{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    .contents__item{
+        &:last-child{
+            margin-top: 50px;
+        }
+    }
+}
+
+@media only screen and (max-width:900px){
+    .contents{
+        text-align: center;
+    }
+
+    .contents__list{
+        flex-direction: column;
+        padding: 0 5px;
+    }
+
+    .contents__item{
+        margin-right: 0;
+        margin-bottom: 16px;
+        max-width: 335px;
+        &:last-child{
+            margin-bottom: 0;
+            margin-top: 0;
+        }
+    }
+
+    .contents__item-img{
+        width: 335px;
+    }
+
+    .contents-pag__list{
+        display: none;
+    }
+
+    .contents__title{
+        @include poppins (700,30px,100%);
+    }
+
+    .contents__item-bigtext, .contents__item-smalltext{
+        margin-left: 0;
+    }
+}

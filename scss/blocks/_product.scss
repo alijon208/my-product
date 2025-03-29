@@ -1,0 +1,114 @@
+.product{
+    margin-bottom: 200px;
+    text-align: center;
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 100%;
+        height: 390px;
+        border-radius: 0 0 50% 50%;
+        content: '';
+        top: 100px;
+        z-index: -1;
+        left: 0;
+        background: var(--gradient);
+    }
+}
+.product__list{
+    @include flex-box;
+    align-items: flex-start;
+    text-align: left;
+    margin-bottom: 50px;
+}
+
+.product__title{
+    @include poppins (700,32px,100%);
+    color: var(--dark);
+    margin-bottom: 66px;
+}
+
+.product__item-title{
+    @include poppins (600,22px,100%);
+    color: var(--dark);
+    margin-bottom: 13px;
+}
+
+.product__item-info{
+    @include poppins;
+    color: var(--dark);
+}
+
+.product__item{
+    max-width: 220px;
+    padding-top: 81px;
+    margin-right: 20px;
+    position: relative;
+    &::before{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        border-radius: 19px;
+        content: '';
+        background-color: $light-green;
+        background-image: url('../../img/product-before-first.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    &:nth-child(2){
+        &::before{
+            background-image: url('../../img/product-before-second.svg');
+            background-color: rgba(77, 141, 255, 1);
+        }
+    }
+    &:nth-child(3){
+        &::before{
+            background-image: url('../../img/product-before-third.svg');
+            background-color: rgba(116, 10, 118, 1);
+        }
+    }
+
+    &:last-child{
+        &::before{
+            background-image: url('../../img/product-before-fourth.svg');
+            background-color: rgba(240, 62, 61, 1);
+        }
+    }
+}
+
+
+@media only screen and (max-width:900px){
+    .product__list{
+        flex-direction: column;
+        text-align: center;
+        max-width: 220px;
+        margin-left: 37%;
+    }
+
+    .product{
+        &::after{
+            top: 70%;
+        }
+    }
+
+    .product__item{
+        margin-right: 0;
+        margin-bottom: 35px;
+        &::before{
+            left: calc(50% - 30px);
+        }
+    }
+}
+
+@media only screen and (max-width:660px){
+    .product__list{
+        margin-left: 30%;
+    }
+}
+@media only screen and (max-width:400px){
+    .product__list{
+        margin-left: 17%;
+    }
+}

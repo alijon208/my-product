@@ -1,0 +1,61 @@
+@mixin poppins ($weight:400,$size:16px,$height:28px){
+    font-family: 'Poppins';
+    font-weight: $weight;
+    font-size: $size;
+    line-height: $height;
+    letter-spacing: 0px;
+}
+
+@mixin flex-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+@mixin dialog ($background:white,$position) {
+    color: rgba(47, 40, 30, 1);
+    display: inline-block;
+    padding: 15px 25px;
+    background-color: $background;
+    border-radius: 26px;
+    box-shadow: 0px 2px 15px 0px rgba(23, 58, 86, 0.1);
+    position: relative;
+    &::before{
+      position: absolute;
+      width: 17px;
+      height: 17px;
+      background-color: $background;
+      border-radius: 50%;
+      content: '';
+      bottom: -6px;
+    }
+    &::after{
+      position: absolute;
+      width: 9px;
+      height: 9px;
+      background-color: $background;
+      content: '';
+      border-radius: 50%;
+      bottom: -20px;
+      box-shadow: 0px 2px 15px 0px rgba(23, 58, 86, 0.1);
+    }
+    @if ($position == "left"){
+      margin-left: 16px;
+      &::before{
+        left: 32px;
+      }
+      &::after{
+        left: 21px;
+      }
+    }
+    @else if ($position == "right"){
+      margin-top: 14px;
+      margin-right: 16px;
+      &::before{
+        right: 55px;
+      }
+      &::after{
+        right: 36px;
+      }
+    }
+}

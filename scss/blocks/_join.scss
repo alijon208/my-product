@@ -1,0 +1,25 @@
+.join__container{
+    max-width: 968px;
+    background-color: $light-green;
+    padding: 45px;
+    border-radius: 32px;
+    background-image: url('../../img/join-bg.png');
+    background-repeat: no-repeat;
+    background-position: center right;
+    margin-top: 150px;
+}
+
+.join__text{
+    @include poppins (600,32px,151%);
+    color: white;
+    margin-bottom: 110px;
+    max-width: 430px;
+}
+
+@media only screen and (max-width:900px){
+    .join__container{
+        text-align: center;
+        background-position: bottom center;
+    }
+
+}

@@ -1,0 +1,22 @@
+.link{
+    padding: 15px 41px;
+    border: 1px solid $light-green;
+    background-color: $light-green;
+    border-radius: 8px;
+    color: white;
+    transition: 300ms;
+    &:hover{
+        background-color: transparent;
+        color: $light-green;
+    }
+}
+
+.link--light{
+    background-color: white;
+    border: 1px solid white;
+    color: $light-green;
+    &:hover{
+        background-color: transparent;
+        color: white;
+    }
+}

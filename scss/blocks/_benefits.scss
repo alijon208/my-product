@@ -1,0 +1,127 @@
+.benefits{
+    margin-bottom: 205px;
+}
+
+.benefits__item{
+    @include flex-box;
+    margin-bottom: 150px;
+    &:last-child{
+        margin-bottom: 0;
+    }
+}
+
+.benefits__item-top{
+    @include poppins (600,16px,100%);
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+.benefits__item-title{
+    @include poppins (700,32px,100%);
+    color: var(--dark);
+    margin-bottom: 131px;
+}
+
+.benefits__item-smalltitle{
+    @include poppins (600,16px,26px);
+    color: var(--dark);
+    margin-bottom: 12px;
+}
+
+.benefits__item-info{
+    @include poppins;
+    color: var(--dark);
+    margin-bottom: 25px;
+    max-width: 470px;
+}
+.benefits__item-content{
+    margin-right: 20px;
+}
+
+.benefits__item-ticks-tick-text{
+    @include poppins;
+    color: var(--dark);
+}
+
+.benefits__item-second{
+    @include flex-box;
+}
+
+.benefits__item-img-second{
+    margin-right: 94px;
+}
+
+.benefits__item-title-second{
+    margin-bottom: 23px;
+}
+
+.benefits__item-ticks-tick{
+    margin-bottom: 30px;
+    padding-left: 65px;
+    position: relative;
+    &::after{
+        position: absolute;
+        width: 35px;
+        height: 35px;
+        content: '';
+        border-radius: 14px;
+        left: 0;
+        top: 15px;
+        background-image: url('../../img/tick.svg');
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-color: rgba(255, 153, 0, 1);
+    }
+    &:nth-child(2){
+        &::after{
+            background-color: rgba(240, 62, 61, 1);
+        }
+    }
+    &:last-child{
+        margin-bottom: 0;
+        &::after{
+            background-color: rgba(77, 141, 255, 1);
+        }
+    }
+}
+
+.benefits__item-text{
+    @include poppins;
+    color: var(--dark);
+    margin-bottom: 30px;
+}
+
+.benefits__item-title-third{
+    margin-bottom: 23px;
+}
+
+@media only screen and (max-width:950px){
+    .benefits__item-img{
+        width: 450px;
+        height: auto;
+        margin-right: 0;
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .benefits__item{
+        flex-direction: column-reverse;
+        &:nth-child(2){
+            flex-direction: column;
+        }
+        .benefits__item-title{
+            margin-bottom: 16px;
+        }
+    }
+    .benefits__item-content{
+        margin-right: 0;
+        max-width: 350px;
+    }
+}
+
+@media only screen and (max-width:450px){
+    .benefits__item-img{
+        width: 330px;
+    }
+}

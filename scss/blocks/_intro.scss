@@ -1,0 +1,89 @@
+.intro{
+    margin-top: 86px;
+}
+
+.intro__container{
+    @include flex-box;
+    margin-bottom: 120px;
+}
+
+.intro__title{
+    @include poppins (700,40px,60px);
+    color: var(--dark);
+    margin-bottom: 18px;
+}
+
+.intro__info{
+    margin-bottom: 70px;
+    color: var(--dark);
+    @include poppins (600,18px,28px);
+}
+
+.intro__content{
+    max-width: 460px;
+    margin-right: 20px;
+}
+
+.intro__start-link{
+    @include poppins (600,16px,100%);
+    color: $light-green;
+    border-bottom: 1px solid $light-green;
+    margin-left: 56px;
+    position: relative;
+    &::before{
+        position: absolute;
+        width: 17px;
+        height: 19px;
+        content: '';
+        left: -25px;
+        top: 3px;
+        background: url('../../img/intro-link-before.svg') no-repeat center center;
+    }
+}
+
+@media only screen and (max-width:1011px){
+    .intro__img{
+        width: 500px;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width:915px){
+    .intro__container{
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .intro__img{
+        width: 600px;
+    }
+    .intro__content{
+        margin-right: 0;
+    }
+}
+
+@media only screen and (max-width:600px){
+    .intro__img{
+        width: 500px;
+    }
+    .intro__title{
+        @include poppins (700,30px,60px);
+    }
+    .intro__container{
+        padding: 0;
+    }
+}   
+
+@media only screen and (max-width:500px){
+    .intro__img{
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width:400px){
+    .intro__img{
+        width: 300px;
+    }
+    .intro__start-link{
+        margin-left: 30px;
+    }
+}
