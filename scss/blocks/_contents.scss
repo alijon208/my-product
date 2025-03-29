@@ -19,7 +19,6 @@
 
 .contents__item{
     background-color: var(--white);
-    margin-right: 30px;
     border: 1px solid rgba(222, 222, 222, 1);
     border-radius: 8px;
     max-width: 348px;
@@ -73,7 +72,7 @@
     margin-top: 64px;
 }
 
-@media only screen and (max-width:1145px){
+@media only screen and (max-width:1050px){
     .contents__list{
         flex-wrap: wrap;
         justify-content: space-around;

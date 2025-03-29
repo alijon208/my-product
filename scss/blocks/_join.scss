@@ -1,7 +1,11 @@
+.join{
+    margin-bottom: 150px;
+}
+
 .join__container{
     max-width: 968px;
     background-color: $light-green;
-    padding: 45px;
+    padding: 60px 45px;
     border-radius: 32px;
     background-image: url('../../img/join-bg.png');
     background-repeat: no-repeat;
@@ -19,7 +23,26 @@
 @media only screen and (max-width:900px){
     .join__container{
         text-align: center;
-        background-position: bottom center;
+        background-position: center bottom;
+        padding-bottom: 400px;
     }
 
+    .join__text{
+        margin: 0 auto;
+        margin-bottom: 100px;
+        @include poppins (600,28px,151%);
+    }
+
+}
+
+@media
+only screen and (-webkit-min-device-pixel-ratio: 2),
+only screen and (   min--moz-device-pixel-ratio: 2),
+only screen and (     -o-min-device-pixel-ratio: 2/1),
+only screen and (        min-device-pixel-ratio: 2),
+only screen and (                min-resolution: 192dpi),
+only screen and (                min-resolution: 2dppx) { 
+    .join__container{
+        background-image: url('../../img/join@2x.png');
+    }
 }

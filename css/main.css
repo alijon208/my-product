@@ -870,7 +870,6 @@ ul, ol {
 
 .contents__item {
   background-color: var(--white);
-  margin-right: 30px;
   border: 1px solid rgb(222, 222, 222);
   border-radius: 8px;
   max-width: 348px;
@@ -936,7 +935,7 @@ ul, ol {
   margin-top: 64px;
 }
 
-@media only screen and (max-width: 1145px) {
+@media only screen and (max-width: 1050px) {
   .contents__list {
     flex-wrap: wrap;
     justify-content: space-around;
@@ -1124,13 +1123,13 @@ ul, ol {
   transition: 300ms;
 }
 .price__link:hover {
-  border: 1px solid #02897a;
+  border: 1px solid rgb(2, 137, 122);
   background-color: transparent;
   color: rgb(2, 137, 122);
 }
 
 .standart-item {
-  background-color: #02897a;
+  background-color: rgb(2, 137, 122);
 }
 
 .standart-content {
@@ -1253,10 +1252,14 @@ ul, ol {
     margin-bottom: 0;
   }
 }
+.join {
+  margin-bottom: 150px;
+}
+
 .join__container {
   max-width: 968px;
   background-color: rgb(2, 137, 122);
-  padding: 45px;
+  padding: 60px 45px;
   border-radius: 32px;
   background-image: url("../../img/join-bg.png");
   background-repeat: no-repeat;
@@ -1278,6 +1281,21 @@ ul, ol {
 @media only screen and (max-width: 900px) {
   .join__container {
     text-align: center;
-    background-position: bottom center;
+    background-position: center bottom;
+    padding-bottom: 400px;
+  }
+  .join__text {
+    margin: 0 auto;
+    margin-bottom: 100px;
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 151%;
+    letter-spacing: 0px;
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .join__container {
+    background-image: url("../../img/join@2x.png");
   }
 }

@@ -97,7 +97,7 @@
 
 .price__link {
     padding: 11px 19px;
-    background-color: rgba(2, 137, 122, 1);
+    background-color: $light-green;
     color: white;
     border-radius: 8px;
     margin-top: 38px;
@@ -105,14 +105,14 @@
     border: 1px solid transparent;
     transition: 300ms;
     &:hover {
-        border: 1px solid #02897a;
+        border: 1px solid $light-green;
         background-color: transparent;
-        color: rgba(2, 137, 122, 1);
+        color: $light-green;
     }
 }
 
 .standart-item {
-    background-color: #02897a;
+    background-color: $light-green;
 }
 
 .standart-content {
