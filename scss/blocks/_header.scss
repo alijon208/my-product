@@ -20,28 +20,30 @@
 }
 .header__content{
     @include flex-box;
-    gap: 20px;
 }
 
 .header__nav-list{
     display: flex;
     align-items: center;
+    margin-right: 24px;
 }
 
 .header__nav-item{
     margin-right: 20px;
-    @include poppins;
     &:last-child{
         margin-right: 0;
-    }
-    &:hover{
-        font-weight: 600;
     }
 }
 
 .header__nav-link{
     color: var(--dark);
+    @include poppins (500,16px,28px);
+    transition: 100ms;
+    &:active{
+        font-weight: bolder;
+    }
 }
+
 
 .gradient{
     position: absolute;

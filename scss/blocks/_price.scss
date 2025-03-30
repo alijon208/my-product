@@ -1,5 +1,6 @@
 .price{
     margin-top: 150px;
+    margin-bottom: 150px;
 }
 
 .price__text {
@@ -17,21 +18,20 @@
 
 .price__pricing {
     @include poppins (600,24px,36px);
-    align-items: center;
-    max-width: 100px;
-    margin: 0 auto;
-    margin-top: 130px;
+    text-align: center;
+    margin-bottom: 32px;
     color: var(--dark);
 }
 
-.big-title {
-    @include poppins (700,40px,60px);
-    margin-bottom: 16px;
+.price__big-text {
+    @include poppins (700,40px,100%);
+    margin-bottom: 32px;
+    color: var(--dark);
+    text-align: center;
 }
 
 .price__list {
     @include flex-box;
-    margin-bottom: 215px;
 }
 
 .price__item {

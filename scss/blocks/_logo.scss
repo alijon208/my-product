@@ -1,6 +1,7 @@
 .logo{
     @include poppins (700,30px,28px);
     color: var(--dark);
+    display: inline-block;
     display: flex; 
     align-items: center;
 }

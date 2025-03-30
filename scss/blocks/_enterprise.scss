@@ -1,0 +1,33 @@
+.enterprise{
+    text-align: center;
+    background: var(--gradient3);
+}
+
+.enterprise__title{
+    @include poppins (600,24px,100%);
+    color: var(--dark);
+    margin-bottom: 32px;
+}
+
+.enterprise__big-text{
+    @include poppins (700,34px,100%);
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.enterprise__small-text{
+    @include poppins (400,18px,100%);
+    color: var(--dark);
+    margin-bottom: 64px;
+}
+
+.enterprise__link{
+    padding: 11px 18px;
+    margin-bottom: 46px;
+}
+
+@media only screen and (max-width:900px){
+    .enterprise__big-text{
+        @include poppins (700,30px,100%);
+    }
+}

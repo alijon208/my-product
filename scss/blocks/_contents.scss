@@ -91,13 +91,17 @@
 
     .contents__list{
         flex-direction: column;
-        padding: 0 5px;
+    }
+
+    .contents__item-bigtext{
+        @include poppins (700,20px,35px);
     }
 
     .contents__item{
         margin-right: 0;
         margin-bottom: 16px;
-        max-width: 335px;
+        max-width: 320px;
+        text-align: left;
         &:last-child{
             margin-bottom: 0;
             margin-top: 0;
@@ -105,7 +109,7 @@
     }
 
     .contents__item-img{
-        width: 335px;
+        width: 320px;
     }
 
     .contents-pag__list{
