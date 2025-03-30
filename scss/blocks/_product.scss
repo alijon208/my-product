@@ -16,8 +16,6 @@
 }
 .product__list{
     @include flex-box;
-    align-items: flex-start;
-    text-align: left;
     margin-bottom: 50px;
 }
 
@@ -42,6 +40,7 @@
     max-width: 220px;
     padding-top: 81px;
     margin-right: 20px;
+    text-align: left;
     position: relative;
     &::before{
         position: absolute;
@@ -82,9 +81,11 @@
 @media only screen and (max-width:900px){
     .product__list{
         flex-direction: column;
-        text-align: center;
+        display: flex;
+        align-items: center;
+        width: 50%;
+        margin: 0 auto;
         max-width: 220px;
-        margin-left: 37%;
     }
 
     .product{
@@ -96,19 +97,14 @@
     .product__item{
         margin-right: 0;
         margin-bottom: 35px;
+        text-align: center; 
         &::before{
             left: calc(50% - 30px);
         }
     }
+
+    .product__item-title{
+        @include poppins (600,18px,100%);
+    }
 }
 
-@media only screen and (max-width:660px){
-    .product__list{
-        margin-left: 30%;
-    }
-}
-@media only screen and (max-width:400px){
-    .product__list{
-        margin-left: 17%;
-    }
-}

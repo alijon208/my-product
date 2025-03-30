@@ -149,7 +149,7 @@ ul, ol {
 @media only screen and (max-width: 900px) {
   .sign {
     flex-direction: column;
-    margin-left: 25%;
+    margin-left: 20%;
     align-items: flex-start;
   }
   .sign-in {
@@ -288,6 +288,7 @@ ul, ol {
   height: 31px;
   border: none;
   transition: 200ms;
+  cursor: pointer;
 }
 
 .hamburger--close {
@@ -451,8 +452,6 @@ ul, ol {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  align-items: flex-start;
-  text-align: left;
   margin-bottom: 50px;
 }
 
@@ -489,6 +488,7 @@ ul, ol {
   max-width: 220px;
   padding-top: 81px;
   margin-right: 20px;
+  text-align: left;
   position: relative;
 }
 .product__item::before {
@@ -520,9 +520,11 @@ ul, ol {
 @media only screen and (max-width: 900px) {
   .product__list {
     flex-direction: column;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 0 auto;
     max-width: 220px;
-    margin-left: 37%;
   }
   .product::after {
     top: 70%;
@@ -530,19 +532,17 @@ ul, ol {
   .product__item {
     margin-right: 0;
     margin-bottom: 35px;
+    text-align: center;
   }
   .product__item::before {
     left: calc(50% - 30px);
   }
-}
-@media only screen and (max-width: 660px) {
-  .product__list {
-    margin-left: 30%;
-  }
-}
-@media only screen and (max-width: 400px) {
-  .product__list {
-    margin-left: 17%;
+  .product__item-title {
+    font-family: "Poppins";
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 100%;
+    letter-spacing: 0px;
   }
 }
 .benefits {
